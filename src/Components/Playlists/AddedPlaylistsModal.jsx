@@ -3,6 +3,7 @@ import { v4 as uuid } from 'uuid';
 import { useAppContext } from '../../AppContext';
 import Modal from '../Shared/Modal';
 import SpinnerButton from '../Shared/SpinnerButton';
+import NoData from '../Shared/NoData';
 import { noop } from '../../utils';
 
 const AddedPlaylistsModal = ({ videoId, setIsModalOpen }) => {
@@ -41,6 +42,7 @@ const AddedPlaylistsModal = ({ videoId, setIsModalOpen }) => {
     <Modal setIsModalOpen={setIsModalOpen} width={400}>
       <h3>Playlists</h3>
       <ul className="playlists">
+        {playLists.length === 0 && <NoData text="No playlists created yet!" />}
         {playLists.map((item) => {
           const isAddedToPlaylist = item.videos.includes(videoId);
           return (
