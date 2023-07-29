@@ -34,8 +34,17 @@
 
 .layout {
   padding: 32px;
+  align-self: stretch;
 
   h1 {
     margin-bottom: 24px;
   }
+}
+
+.no-data-container {
+  height: calc(100% - 32px);
+  @extend .d-flex;
+
+  font-size: 2.2rem;
+  font-style: italic;
 }
