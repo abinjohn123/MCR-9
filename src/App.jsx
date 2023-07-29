@@ -1,9 +1,17 @@
+import { Routes, Route } from 'react-router-dom';
+
+import Sidebar from './Components/Sidebar';
+import Home from './Components/Home';
+
 import './App.scss';
 
 function App() {
   return (
     <>
-      <h1>Hehe</h1>
+      <Sidebar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </>
   );
 }

@@ -29,3 +29,14 @@ body {
     background: $light-1;
   }
 }
+
+body,
+#root {
+  min-height: 100vh;
+}
+
+#root {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  align-items: start;
+}

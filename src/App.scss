@@ -1,0 +1,33 @@
+@import './reuse';
+
+.sidebar {
+  @extend .d-flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: start;
+  height: 100%;
+  background-color: $light-1;
+  border-right: $border-gray-1;
+
+  .menu-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+
+    text-decoration: none;
+    color: $white-1;
+
+    &.active,
+    &:hover {
+      color: $primary-1;
+      background-color: $light-3;
+
+      .icon {
+        stroke: $primary-1;
+        fill: $primary-1;
+      }
+    }
+  }
+}
