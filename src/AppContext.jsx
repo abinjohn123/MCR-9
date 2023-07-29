@@ -9,7 +9,7 @@ const LOCAL_STORAGE_KEYS = {
 
 const AppProvider = ({ children }) => {
   const [watchLater, setWatchLater] = useState(
-    JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEYS.WATCH_LATER) ?? [])
+    JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEYS.WATCH_LATER)) ?? []
   );
   const [playLists, setPlaylists] = useState(
     JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEYS.PLAYLISTS)) ?? []
