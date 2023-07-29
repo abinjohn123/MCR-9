@@ -21,6 +21,12 @@
   width: 282px;
   height: 225px;
 
+  .action {
+    margin-top: 6px;
+    @extend .d-flex;
+    justify-content: space-between;
+  }
+
   &.--new {
     @extend .d-flex;
     flex-direction: column;
