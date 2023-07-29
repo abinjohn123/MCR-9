@@ -14,3 +14,38 @@
     margin-bottom: 8px;
   }
 }
+
+.playlist-card {
+  @extend .card;
+  @extend .cur-p;
+  width: 282px;
+  height: 225px;
+
+  .title {
+    margin-bottom: 4px;
+  }
+
+  .desc {
+    color: $light-4;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &.--new {
+    @extend .d-flex;
+    flex-direction: column;
+    gap: 4px;
+    color: $primary-1;
+    font-size: 1.6rem;
+
+    .icon {
+      height: 48px;
+      width: 48px;
+    }
+
+    &:hover {
+      background-color: $light-1;
+    }
+  }
+}

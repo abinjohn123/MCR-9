@@ -57,6 +57,8 @@
 .no-data-container {
   height: calc(100% - 32px);
   @extend .d-flex;
+  flex-direction: column;
+  gap: 16px;
 
   font-size: 2.2rem;
   font-style: italic;
