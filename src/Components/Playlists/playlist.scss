@@ -21,17 +21,6 @@
   width: 282px;
   height: 225px;
 
-  .title {
-    margin-bottom: 4px;
-  }
-
-  .desc {
-    color: $light-4;
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
   &.--new {
     @extend .d-flex;
     flex-direction: column;
@@ -48,4 +37,19 @@
       background-color: $light-1;
     }
   }
+}
+
+.title {
+  margin-bottom: 4px;
+}
+
+.desc {
+  color: $light-4;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mb24 {
+  margin-bottom: 24px;
 }
