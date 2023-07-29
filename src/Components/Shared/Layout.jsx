@@ -1,6 +1,8 @@
-const Layout = ({ title = '', children }) => {
+import cx from 'classnames';
+
+const Layout = ({ title = '', className, children }) => {
   return (
-    <main className="layout">
+    <main className={cx('layout', className)}>
       <h1>{title}</h1>
       {children}
     </main>

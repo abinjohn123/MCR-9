@@ -21,7 +21,7 @@ const VideoCard = ({ video }) => {
   };
 
   return (
-    <div className="video-card" onClick={() => navigate(`video/${videoId}`)}>
+    <div className="video-card" onClick={() => navigate(`/video/${videoId}`)}>
       <div className="img-container">
         <img src={thumbnail} alt="title" />
       </div>

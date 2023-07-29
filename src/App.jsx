@@ -6,6 +6,7 @@ import VideoList from './Components/Listing';
 import WatchLater from './Components/Listing/WatchLater';
 import PlayList from './Components/Playlists';
 import PlayListListing from './Components/Playlists/PlayListListing';
+import VideoPlayer from './Components/Video';
 
 import './App.scss';
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/explore/:categoryName" element={<VideoList />} />
         <Route path="/explore/" element={<VideoList />} />
+        <Route path="/video/:videoId" element={<VideoPlayer />} />
         <Route path="/watchlater" element={<WatchLater />} />
         <Route path="/playlists" element={<PlayList />} />
         <Route path="/playlists/:playlistId" element={<PlayListListing />} />

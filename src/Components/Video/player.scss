@@ -1,0 +1,65 @@
+@import '../../reuse';
+
+.player-grid {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+}
+.player-container {
+  iframe {
+    width: 100%;
+    height: 500px;
+  }
+}
+
+.controls {
+  @extend .d-flex;
+  gap: 8px;
+  justify-content: flex-end;
+
+  .btn {
+    padding: 0;
+  }
+}
+
+.icon {
+  height: 28px;
+  width: 28px;
+}
+
+.watch-later {
+  &:hover {
+    stroke: $light-2;
+    fill: $dark-2;
+  }
+
+  &.active {
+    .icon {
+      stroke: $primary-1;
+      fill: $primary-1;
+    }
+  }
+}
+
+.playlists {
+  list-style: none;
+  @extend .d-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin: 16px 0;
+
+  .list-item {
+    label {
+      cursor: pointer;
+      user-select: none;
+      @extend .d-flex;
+      justify-content: flex-start;
+      gap: 8px;
+    }
+  }
+}
+
+.new-playlist-form.--border {
+  border-top: $border-gray-1;
+  padding-top: 16px;
+}
