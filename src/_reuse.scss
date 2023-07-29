@@ -130,3 +130,15 @@ $border-gray-1: 1px solid rgba(220, 220, 221, 0.3);
   backdrop-filter: blur(10px);
   z-index: 998;
 }
+
+.input-element-theme {
+  padding: 8px 6px;
+  width: 100%;
+  outline: none;
+  border: $border-gray-1;
+  background-color: $light-1;
+  color: $light-4;
+  border-radius: 4px;
+  letter-spacing: 0.2mm;
+  resize: none;
+}
