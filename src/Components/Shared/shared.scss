@@ -1,0 +1,113 @@
+@import '../../reuse';
+
+.app-header {
+  padding: 16px 0;
+  @extend .d-flex;
+  justify-content: flex-start;
+
+  .logo,
+  .link {
+    text-decoration: none;
+    &:visited,
+    &:active {
+      text-decoration: none;
+    }
+    color: $primary-1;
+
+    .sm-screen {
+      display: block;
+    }
+    .lg-screen {
+      display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+      .sm-screen {
+        display: none;
+      }
+      .lg-screen {
+        display: block;
+      }
+    }
+  }
+
+  .logo {
+    font-family: 'VT323', monospace;
+    font-size: 3rem;
+  }
+
+  .header-actions {
+    @extend .d-flex;
+    gap: 12px;
+    margin-left: auto;
+  }
+
+  .avatar {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+
+    &:hover {
+      outline: 2px solid $primary-1;
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+}
+
+.void-svg {
+  padding: 48px 0;
+  @extend .d-flex;
+  flex-direction: column;
+  gap: 16px;
+  .img-container {
+    height: 164px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+@keyframes spinner-btn {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.button-container {
+  position: relative;
+  display: inline-block;
+}
+
+.spinner-btn {
+  position: relative;
+
+  &.disabled {
+    opacity: 0.7;
+  }
+  .spinner-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .spinner {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    border: 2px solid $white-1;
+    border-right-color: rgba(0, 0, 0, 0);
+    animation-name: spinner-btn;
+    animation-timing-function: linear;
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
+  }
+}
