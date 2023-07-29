@@ -1,0 +1,38 @@
+@import '../../reuse';
+
+.categories-draw {
+  @extend .d-flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.category-card {
+  @extend .card;
+  @extend .cur-p;
+  position: relative;
+
+  background-color: $dark-1;
+  background-image: var(--thumbnail);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: overlay;
+
+  width: 300px;
+  height: 150px;
+
+  &:hover {
+    background-blend-mode: normal;
+  }
+
+  .cat-name {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+}

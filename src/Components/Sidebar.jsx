@@ -43,11 +43,11 @@ const MenuItem = ({ menuItem }) => {
 
 const Sidebar = () => {
   return (
-    <div className="sidebar">
+    <nav className="sidebar">
       {menuItems.map((item, id) => (
         <MenuItem menuItem={item} key={id} />
       ))}
-    </div>
+    </nav>
   );
 };
 
