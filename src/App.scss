@@ -35,9 +35,22 @@
 .layout {
   padding: 32px;
   align-self: stretch;
+  overflow-y: auto;
 
   h1 {
     margin-bottom: 24px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $light-1;
   }
 }
 
