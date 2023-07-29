@@ -31,7 +31,6 @@ const menuItems = [
 
 const MenuItem = ({ menuItem }) => {
   const { label, icon, path } = menuItem;
-  console.log(typeof icon);
 
   return (
     <NavLink to={path} className="menu-item">

@@ -20,8 +20,6 @@ const VideoCard = ({ video }) => {
     else setWatchLater([...watchLater, videoId]);
   };
 
-  console.log(watchLater);
-
   return (
     <div className="video-card" onClick={() => navigate(`video/${videoId}`)}>
       <div className="img-container">
